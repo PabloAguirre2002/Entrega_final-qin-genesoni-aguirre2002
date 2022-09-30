@@ -1,0 +1,50 @@
+{% extends "apponline/plantilla_base.html" %}
+
+{% block style_block %}
+<style>
+  table.coder-table {
+    border:3px solid;
+  }
+  th,
+  td {
+    border:1px solid;
+    padding:5px 10px;
+  }
+</style>
+{% endblock style_block %}
+
+{% block contenido_base %}
+
+<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhoHqk46k1Pv0998X_NPry3u_C1di5zaFN3PwUWCNCy0Uf2OmKlDhBc18RbRMaSUrB0xY1pmtExuzcHo2YXlT3Vf_KKqLRp2wCh4t8ZfikO5UyADVM8Ojki5owqYTIeVW-9cBUjxKqaBal70r5kG7G7EFoCWSwJlO-54WTVGAcdtSEQzSwFJiZHB-ri/s1149/ZAPATOS%20BAN.png" width="1700" height="300" alt=""/><em><strong>
+  <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi8qfIQeRgqiuQCeGl2MLURH5ycuagrsNkvIjubxzXdrnMPdEJzxqH_gXwRNb9cQNsywGI0BIFgZ3-e_vrkh2kln7hYjWI4SsqH2gnh62H-Z4X6lPvsBPVmnZX6uMFfTjCt4-7KMB9gZA0NaQbWS34gpgVUhLXII4MCNQgUyN2NZCObZxt8VEDIpLkl/s1202/ElBan.png" width="1700" height="200" alt=""/><em><strong>
+
+    <h1>Zapatos</h1>
+    <br>
+    <a href="{% url 'zapatos_formulario' %}">Crear zapatos!</a>
+    <br>
+    <a href="{% url 'busqueda_zapatos_form' %}">Buscar Zapatos</a>
+    <table class="coder-table">
+  <tbody>
+    <tr>
+      <th>
+        <strong>Nombre</strong>
+      </th>
+      <th>
+        <strong>Codigo</strong>
+      </th>
+      <th>
+        <strong>Stock</strong>
+      </th>
+    </tr>
+    {% for zapatos in zapatos %}
+    <tr>
+      <td>{{zapatos.nombre}}</td>
+      <td>{{zapatos.codigo}}</td>
+      <td>{{zapatos.stock}}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+<br><br><br><br>
+<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj5h_YRz9mztdH2bFH3X0KiTGH7mNI_lrDbnVFmuwnbieO97a7dFIU-NxREfZierhIY7p2ygZKyW2ls6lEE48-YCMjJ6xmc4yTOM11S8qLfLM5E6vZzPjIH3ewVR_08vlkZF8KI-2lsi6NXlIxszrewLI7xqID0f6lYiy7VNuSXRfE0wlez5sA7Rqic/s1198/Ofertas%20INICIO.png" width="1700" height="80" alt=""/><em><strong>
+{% endblock contenido_base %}

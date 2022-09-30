@@ -1,0 +1,52 @@
+{% extends "apponline/plantilla_base.html" %}
+
+{% block style_block %}
+<style>
+  table.coder-table {
+    border:3px solid;
+  }
+  th,
+  td {
+    border:1px solid;
+    padding:5px 10px;
+  }
+</style>
+{% endblock style_block %}
+
+{% block contenido_base %}
+
+<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh0mzpkHrf-mmLFJ3ZrP_Ly8C3jN7_D1q-oOFp5yFo0BT6AjMgWDu57mfZYOaPEWLrgAb-yc8prAkSqQ1H4T82K3k5u2M7dbntyd_umMDp_wagHdDXP8Cp8-YKeOK8fYXtjaf4G-B1W8scut68ptA3h7y564lob8gwiOoDbrF7erivOvFufVomq_7aE/s1146/Accesorios%20BAN.png" width="1700" height="300" alt=""/><em><strong>
+  <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi8qfIQeRgqiuQCeGl2MLURH5ycuagrsNkvIjubxzXdrnMPdEJzxqH_gXwRNb9cQNsywGI0BIFgZ3-e_vrkh2kln7hYjWI4SsqH2gnh62H-Z4X6lPvsBPVmnZX6uMFfTjCt4-7KMB9gZA0NaQbWS34gpgVUhLXII4MCNQgUyN2NZCObZxt8VEDIpLkl/s1202/ElBan.png" width="1700" height="200" alt=""/><em><strong>
+
+    <h1>Accesorios</h1>
+    <br>
+<a href="{% url 'accesorios_formulario' %}">Crear accesorios!</a>
+<br>
+<a href="{% url 'busqueda_accesorios_form' %}">Buscar Accesorios</a>
+
+<br><br>
+
+<table class="coder-table">
+  <tbody>
+    <tr>
+      <th>
+        <strong>Nombre</strong>
+      </th>
+      <th>
+        <strong>Codigo</strong>
+      </th>
+      <th>
+        <strong>Stock</strong>
+      </th>
+    </tr>
+    {% for accesorio in accesorios %}
+    <tr>
+      <td>{{accesorio.nombre}}</td>
+      <td>{{accesorio.codigo}}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+<br><br><br><br>
+<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj5h_YRz9mztdH2bFH3X0KiTGH7mNI_lrDbnVFmuwnbieO97a7dFIU-NxREfZierhIY7p2ygZKyW2ls6lEE48-YCMjJ6xmc4yTOM11S8qLfLM5E6vZzPjIH3ewVR_08vlkZF8KI-2lsi6NXlIxszrewLI7xqID0f6lYiy7VNuSXRfE0wlez5sA7Rqic/s1198/Ofertas%20INICIO.png" width="1700" height="80" alt=""/><em>
+{% endblock contenido_base %}

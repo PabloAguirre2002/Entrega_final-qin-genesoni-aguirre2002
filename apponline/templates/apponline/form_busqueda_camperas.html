@@ -1,0 +1,11 @@
+{% extends "apponline/plantilla_base.html" %}
+
+{% block contenido_base %}
+<form action="{% url 'busqueda_camperas' %}" method="GET">
+  {% csrf_token %}
+  <span>codigo:
+    <input type="integer" name="codigo">
+  </span>
+  <input type="submit" value="Buscar" />
+</form>
+{% endblock contenido_base %}

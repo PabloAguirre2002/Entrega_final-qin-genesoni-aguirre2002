@@ -1,0 +1,19 @@
+{% extends "apponline/plantilla_base.html" %}
+
+{% block contenido_base %}
+<head>
+    <style>
+        h1{color:red;}
+    </style>
+<!-- Cuerpo-->
+{% if exitoso %}
+<div style="background-color:#545052;">Bienvenido a la tienda virtual online</div>
+{% endif %}
+<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgMWcFZn3ymG7JlmhhRz9P-DQTmRf3gpTSiwxmEHm2lRFhNTu4y0LtpJpt_azQXTC1jCMevarQLWwXgwaHuMk3tTw26FhGjRz6iWfCrPvyyMyByyC6mbcwjJTe4kmb_Bb7AN25B1pfYbchJ0pus2qxIASl4OcNTd0D_lYnq7EtERk4wCBciPSo_8iYq/s898/Foto_1.png" width="1700" height="358" alt=""/><em><strong>
+<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh_-sslEttiGAC4hl4TRq43cxcXDTX3hayWStyHRoNQ8ElVGCVzjOeBhfG2Fhq3sWcn_PAL0L1e1-qXGlw9zMlOHwliZr2DrPj5Swie8GXZ2ndmvlkapWJcVOv7b4eqK382TSlbLDo2t0jJ7WPIe9M9RFM3wc1dr2E44Gx3h5A2-Lv9a3sYwBVk6peJ/s703/Segunda%20Foto.png" width="1700" height="1000" alt=""/></strong></em>
+<img src="{{ user.avatar.imagen.url }}" />
+<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj5h_YRz9mztdH2bFH3X0KiTGH7mNI_lrDbnVFmuwnbieO97a7dFIU-NxREfZierhIY7p2ygZKyW2ls6lEE48-YCMjJ6xmc4yTOM11S8qLfLM5E6vZzPjIH3ewVR_08vlkZF8KI-2lsi6NXlIxszrewLI7xqID0f6lYiy7VNuSXRfE0wlez5sA7Rqic/s1198/Ofertas%20INICIO.png" width="1700" height="80" alt=""/><em>
+<div class="news-cards">
+    <div>
+    
+{% endblock contenido_base %}

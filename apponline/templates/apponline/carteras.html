@@ -1,0 +1,55 @@
+{% extends "apponline/plantilla_base.html" %}
+
+{% block style_block %}
+<style>
+  table.coder-table {
+    border:3px solid;
+  }
+  th,
+  td {
+    border:1px solid;
+    padding:5px 10px;
+  }
+</style>
+{% endblock style_block %}
+
+{% block contenido_base %}
+
+<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgabucai-DxNFn2Ufgf9tkj2apf1x2NnQQV7vVsyXnP9iemJinzVfAItiyn_iJgzL9fHtv6An8dMGhuLHiLFbW5e1NILmY6Yx2YFwtIa68qeRuUvcczFDPmnxqs9rrU4bD0ctIxmsJ21h_m0JecRYRdLGlByV2CYOoXtqW-iZaytQiauxwsh9R3aZ8U/s1148/Carteras%20BAN.png" width="1700" height="300" alt=""/><em><strong>
+  <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi8qfIQeRgqiuQCeGl2MLURH5ycuagrsNkvIjubxzXdrnMPdEJzxqH_gXwRNb9cQNsywGI0BIFgZ3-e_vrkh2kln7hYjWI4SsqH2gnh62H-Z4X6lPvsBPVmnZX6uMFfTjCt4-7KMB9gZA0NaQbWS34gpgVUhLXII4MCNQgUyN2NZCObZxt8VEDIpLkl/s1202/ElBan.png" width="1700" height="200" alt=""/><em><strong>
+
+    <h1>Carteras</h1>
+    <br>
+<a href="{% url 'carteras_formulario' %}">Crear carteras!</a>
+<br>
+<a href="{% url 'busqueda_carteras_form' %}">Buscar Carteras</a>
+<br><br> 
+
+<h3>Carteras:</h3>
+
+<table class="coder-table">
+  <tbody>
+    <tr>
+      <th>
+        <strong>Nombre</strong>
+      </th>
+      <th>
+        <strong>Codigo</strong>
+      </th>
+      <th>
+        <strong>Stock</strong>
+      </th>
+    </tr>
+    {% for cartera in carteras %}
+    <tr>
+      <td>{{cartera.nombre}}</td>
+      <td>{{cartera.codigo}}</td>
+      <td>{{cartera.stock}}</td>
+      <td></td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+<br><br><br><br>
+<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj5h_YRz9mztdH2bFH3X0KiTGH7mNI_lrDbnVFmuwnbieO97a7dFIU-NxREfZierhIY7p2ygZKyW2ls6lEE48-YCMjJ6xmc4yTOM11S8qLfLM5E6vZzPjIH3ewVR_08vlkZF8KI-2lsi6NXlIxszrewLI7xqID0f6lYiy7VNuSXRfE0wlez5sA7Rqic/s1198/Ofertas%20INICIO.png" width="1700" height="80" alt=""/><em>
+{% endblock contenido_base %}
